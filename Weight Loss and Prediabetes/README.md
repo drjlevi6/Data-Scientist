@@ -5,6 +5,6 @@
 
 ### Although I was asymptomatic, I became alarmed that something was wrong with my pancreas, possibly cancer. I obtained an ultrasound; the results were suspicious. Further investigation confirmed the presence of a tumor. 
 
-### Eventually I had surgery, subtotal pancreatectomy of the body and tail of my pancreas. The tumor was unusually small for its location (2.5 cm; tumors in that location are usually 5—7 cm.) It was pre-malignant, rather than malignant, also unusual: there was no spread anywhere. Post-op scanning three months afterward has shown no evidence of recurrence.
+### I underwent surgery, subtotal pancreatectomy involving the body and tail of my pancreas. The tumor, in the body, was unusually small for its location (2.5 cm; tumors in that location are usually 5—7 cm.) It was pre-malignant, rather than malignant, also unusual, with no invasion of surrounding tissues or other organs. Post-op inaging three months later showed no evidence of recurrence.
 
 ### This remarkable event and its history seem to me worthy of sharing. The spreadsheet and its chart are available for review here.
