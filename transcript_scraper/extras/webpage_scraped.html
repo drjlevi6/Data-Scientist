@@ -1,0 +1,2695 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta content="d_learning_course_video_guest" name="pageKey"/>
+<meta content="view_video" name="linkedin:pageTag"/>
+<meta content="en_US" name="locale"/>
+<meta data-app-version="2.0.1755" data-browser-id="e9493922-766f-4948-8303-f9e67cc9f8d7" data-call-tree-id="AAYN+z5FxbsNaD1W88Pl9Q==" data-disable-jsbeacon-pagekey-suffix="false" data-enable-page-view-heartbeat-tracking="" data-member-id="0" data-multiproduct-name="learning-guest-frontend" data-page-instance="urn:li:page:learning_course_video_guest;TtL73y9SRxekPpmoedgZSA==" data-service-name="learning-guest-frontend" id="config"/>
+<link href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/navigablestring-objects" rel="canonical"/>
+<!-- --><!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<script>
+          function getDfd() {let yFn,nFn;const p=new Promise(function(y, n){yFn=y;nFn=n;});p.resolve=yFn;p.reject=nFn;return p;}
+          window.lazyloader = getDfd();
+          window.tracking = getDfd();
+          window.impressionTracking = getDfd();
+          window.ingraphTracking = getDfd();
+          window.appDetection = getDfd();
+          window.pemTracking = getDfd();
+        </script>
+<!-- -->
+<link href="https://static.licdn.com/aero-v1/sc/h/444zstxv7s91nepfm5et6ofge" rel="icon"/>
+<title>NavigableString objects - Python Video Tutorial | LinkedIn Learning, formerly Lynda.com</title>
+<meta content="noarchive, max-image-preview:large" name="robots"/>
+<meta content="Learn how to work with objects. This video covers the BeautifulSoup library, BeautifulSoup objects, and NavigableString objects." name="description"/>
+<meta content="LinkedIn" property="og:site_name"/>
+<meta content="@LI_Learning" name="twitter:site"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="learning-guest-frontend" name="litmsProfileName"/>
+<meta content="NavigableString objects - Python Video Tutorial | LinkedIn Learning, formerly Lynda.com" property="og:title"/>
+<meta content="NavigableString objects - Python Video Tutorial | LinkedIn Learning, formerly Lynda.com" name="twitter:title"/>
+<meta content="Learn how to work with objects. This video covers the BeautifulSoup library, BeautifulSoup objects, and NavigableString objects." property="og:description"/>
+<meta content="Learn how to work with objects. This video covers the BeautifulSoup library, BeautifulSoup objects, and NavigableString objects." name="twitter:description"/>
+<meta content="https://media.licdn.com/dms/image/C4E0DAQHgyyvv2PhNpw/learning-public-crop_675_1200/0/1571768552078?e=2147483647&amp;v=beta&amp;t=E6TKuG3aFoXD-Z7LrGdzgo86BbZZSn_Iaw4rB4vWtoI" property="og:image"/>
+<meta content="https://media.licdn.com/dms/image/C4E0DAQHgyyvv2PhNpw/learning-public-crop_675_1200/0/1571768552078?e=2147483647&amp;v=beta&amp;t=E6TKuG3aFoXD-Z7LrGdzgo86BbZZSn_Iaw4rB4vWtoI" name="twitter:image"/>
+<!-- --> <meta content="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/navigablestring-objects" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="1" data-counter-metric-endpoint="/learning-guest/api/ingraphs/counter" data-gauge-metric-endpoint="/learning-guest/api/ingraphs/gauge" name="clientSideIngraphs"/>
+<link href="https://static.licdn.com/aero-v1/sc/h/45q1cknq9ygyrj3cin9hb4zjc" rel="stylesheet"/>
+<script type="application/ld+json">
+      {"@context":"http://schema.org/","@type":"VideoObject","name":"NavigableString objects - Python for Data Science Essential Training Part 1","author":{"@type":"Person","name":"Lillian Pierson, P.E.","url":"https://www.linkedin.com/learning/instructors/lillian-pierson-p-e"},"thumbnailUrl":"https://media.licdn.com/dms/image/C4E0DAQHgyyvv2PhNpw/learning-public-crop_675_1200/0/1571768552078?e=2147483647&v=beta&t=E6TKuG3aFoXD-Z7LrGdzgo86BbZZSn_Iaw4rB4vWtoI","description":"Learn Python programming for data science. Discover how to clean, transform, analyze, and visualize data, as you build a practical project: an automated web scraper.","duration":"PT10M1S","datePublished":"2019-10-24","uploadDate":"2019-10-24","requiresSubscription":false,"isAccessibleForFree":true,"contentUrl":"https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/navigablestring-objects","interactionCount":285767,"interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/WatchAction","userInteractionCount":285767}],"transcript":" - [Teacher] Now that we've finished with tag objects    let's start looking at the NavigatableString object.    The first thing we want to do is make sure    that you have installed Beautiful Soup    and you would do that through the Anaconda command line.    I showed you how to do that in section 6.1.    So in this case we have already installed Beautiful Soup    and then we just want to check to make sure    that our version of Python is compatible    with the demonstration we've about to do.    So this notebook was written for Python 3.7    and let's just check the version we are running here.    So I'll say import sys and then    I'll just print the sys version.    Run that and okay, cool.    So we are at 3.7.    So next let's go ahead and import    Beautiful Soup into this environment.    So we will say from BS4 import Beautiful Soup, and run that.    Now we have our Beautiful Soup library    imported into our IPython environment.    Now in this demonstration I'm going to show you    how to work with NavigatableString objects.    NavigatableString objects are used as containers    for chunks of text that are stored inside of tags.    So let's just go back to our example    from 6.1 with the soup object.    We'll create a variable here called soup_object    and then we will call the Beautiful Soup    constructor and let's pass an H1 tag.    So we'll create a string and the open tag    is going to be H1 attribute_1=\"heading level 1\"    and then it's going to read the Future Trends in IOT in 2018.    Future trends in IOT in 2018 and then    we will just close this H1 tag.    Okay.    Okay so it looks like I put a quote there    which I didn't need to put so I need to remove that,    and then we have two quotes there    so clean this up a little bit.    Now we want this to be read in as LXML    so let's just pass a parameter that says that.    LXML, okay, and then I'll just double check my syntax    and everything that I've typed out here.    Now let's create and object called tag    and assign it the name H1.    So to do that we'll just say tag is equal to soup_object.H1,    and then let's call the type method    on the tag object to verify that we have    actually indeed created a tag object.    So we'll say type and then pass in    our tag object and run this, and okay,    so you can see that we have indeed created a tag object here    and so let's verify the name of that tag.    It should be H1 so I'll just write tag.name and run that    and yes it is indeed H1 so we have an H1 tag,    but if you just wanted to isolate this string object    from within this tag object then what you can do    is you just say tag.string and it'll print out the string.    Cool, so here we have it, that's our string    from within this tag, so it's right there.    I want to show you here how actually tag.string    is a separate object of it's own.    So let's go ahead and just go to type function    and then pass in tag.string, and when we run this    we see that tag.string is actually a NavigatableString.    So let's play with this a little bit.    I will create a new variable and let's call it    our_navigatable_string and all sides are equal    to tag.string and then print it out.    I'll just copy this and run that.    So basically what this is saying is that our    NavigatableString is now this Future Trends in IOT in 2018.    If you wanted to replace the string object    from within the NavigatableString    you can just call the replace with method    off of the NavigatableString and then    pass in a replacement string.    So let's try that out and we will just replace    this Future Trends for IOT in 2018 with NaN.    So let's just try this out.    We're going to say our navigatable string    and call the replace_with method    and we will pass in Not a Number, so NaN    and then just print our string again.    So we will then say tag.string and see what it prints out,    and as you can see now our string is just not a number.    We have replaced this Future Trends    in IOT with Not a Number.    Okay, now let's look at how to utilize NavigatableStrings.    So I'm giving you this HTML document    and this is going to come preloaded in your Jupyter notebook    just because it's easier for us    to use for demonstration purposes,    and what we're going to do is we're    going to convert this to a parse tree    like we did in the previous section.    So right now I'll just run this cell.    If there is one or more string object    within a parse tree you can easily isolate them.    One way to do that is by calling    the stripped strings generator    to return all of the strings within the object    where string is consisting entirely    of white space are ignored and white space    at the beginning and end of the strings is removed.    So for this example, for each string object    in the parse tree this stripped strings generator    passes through, strips white spaces,    and then prints out each string    that contains a printable representation.    So let's just try this out here.    We'll say for string in our soup object,    we'll call stripped strings and then    for each of these stripped strings    let's just print out a representation of that string.    So put a colon, new line I'm going to say    call it print function, and we want to print    a representation of the string.    So we'll just write REPR and then    pass in the string and then run this.    All right, so now you can see that our strings    have been pretty much cleaned up.    We just have a list of strings here without the tags    or any of the mark up within the body    of this series of strings.    The last thing I want to show you in this demonstration    is how to access parent tag objects within a parse tree.    So let's create a new object called first_link    and then we'll just set it equal to    the A tag from within the parse tree.    First link is equal to our_soup_object.a,    okay and then we'll print out our first link.    Okay cool, so this is actually the first link    in our document and the text that it contains.    So in out document it would be this text here    is actually clickable and it redirects to a bit.ly link,    and if we wanted to access the parent of that first link    we could just say first link, first_link.parent,    and we see that we now have the    parent tag of this first link.    Now the NavigatableString object of first link    is a string that reads last month    Ericsson Digital invited me.    Let me show you.    We will say first_link and then we're just going to    look for the string, so we're going to take that string,    we run that, and we're basically going into this link    and pulling only the string from within it, right.    So that is now printed out as the string object,    and lastly we can also retrieve    the parent of that NavigatableString object.    To do that we would just say first_link.string.parent    and run that.    So in this case the parent of the NavigatableString    is the A tag which is sort of self evident, right.    So now that you know how to work    with objects in Beautiful Soup    we're going to go into using Beautiful Soup for data parsing.    "}
+    </script>
+<!-- --> </head>
+<body dir="ltr">
+<!-- --><!-- --><!-- -->
+<code id="isClsFixActive" style="display: none"><!--true--></code>
+<a class="skip-link btn-md btn-primary absolute z-11 -top-[100vh] focus:top-0" href="#main-content">
+      Skip to main content
+    </a>
+<header class="header base-detail-page__header px-mobile-container-padding bg-color-background-container global-alert-offset sticky-header">
+<nav aria-label="Primary" class="nav pt-1.5 pb-2 flex items-center justify-between relative flex-nowrap mamabear:flex-wrap mamabear:gap-y-1 babybear:flex-wrap babybear:py-1.5 nav--minified-mobile babybear:flex-wrap">
+<a class="nav__logo-link link-no-visited-state z-1 mr-auto babybear:z-0 babybear:mr-0 babybear:flex-1 hover:no-underline focus:no-underline active:no-underline" data-tracking-control-name="learning-course_nav-header-logo" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/?trk=learning-course_nav-header-logo">
+<div class="learning-logo">
+<icon class="learning-logo__inbug onload" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/4zqr0f9jf98vi2nkijyc3bex2"></icon>
+<span aria-hidden="true" class="learning-logo__text">Learning</span>
+<span class="sr-only">LinkedIn Learning</span>
+</div>
+</a>
+<section class="search-bar relative flex flex-grow h-[40px] bg-cool-gray-20 min-w-0 max-w-full mx-4 rounded-sm babybear:mx-0 babybear:mb-1.5 babybear:bg-color-transparent babybear:w-full babybear:flex babybear:flex-wrap search-bar--minified-mobile" data-current-search-type="LEARNING">
+<button class="search-bar__placeholder papabear:hidden mamabear:hidden text-input w-full mt-1.5 !pl-[14px] border-1 border-solid border-color-border-faint rounded-[2px] h-[40px] max-h-[40px] flex items-center overflow-hidden cursor-text" data-tracking-control-name="learning-course_search-switcher-opener">
+<icon class="text-color-icon w-3 h-3 mr-1" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397vrsk6op88l4981ji1xe1qt"></icon>
+<div class="search-bar__full-placeholder font-sans text-md text-color-text max-w-[calc(100%-40px)] text-left whitespace-nowrap overflow-hidden text-ellipsis">
+<!-- --><!-- -->              Search skills, subjects, or software
+<!-- --> </div>
+<span class="sr-only">Expand search</span>
+</button>
+<div class="switcher-tabs__trigger-and-tabs babybear:flex">
+<button aria-describedby="switcher-description" aria-expanded="false" class="switcher-tabs__placeholder flex !h-full !py-0 !pl-2 !pr-1.5 border-r-1 border-solid border-r-color-border-faint babybear:hidden tab-md papabear:tab-vertical mamabear:tab-vertical papabear:justify-start mamabear:justify-start cursor-pointer" data-tracking-control-name="learning-course_switcher-tabs-placeholder">
+<span class="switcher-tabs__placeholder-text m-auto"></span>
+<icon class="switcher-tabs__caret-down-filled onload pointer-events-none block my-auto min-h-[24px] min-w-[24px] h-[24px] babybear:hidden" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/7asbl4deqijhoy3z2ivveispv"></icon>
+</button>
+<div class="hidden" id="switcher-description">This button displays the currently selected search type. When expanded it provides a list of search options that will switch the search inputs to match the current selection. </div>
+<!-- --> <div class="switcher-tabs hidden z-[1] w-auto min-w-[160px] mb-1.5 py-1 absolute top-[48px] left-0 border-solid border-1 border-color-border-faint papabear:container-raised mamabear:container-raised babybear:static babybear:w-[100vw] babybear:h-[48px] babybear:p-0 overflow-y-hidden overflow-x-auto md:overflow-x-hidden">
+<ul class="switcher-tabs__list flex flex-1 items-stretch papabear:flex-col mamabear:flex-col" role="tablist">
+<li class="switcher-tabs__tab h-[44px] babybear:basis-1/2" role="presentation">
+<button aria-controls="jobs-search-panel" aria-selected="false" class="switcher-tabs__button w-full h-full tab-md papabear:tab-vertical mamabear:tab-vertical papabear:justify-start mamabear:justify-start cursor-pointer" data-switcher-type="JOBS" data-tracking-control-name="learning-course_switcher-tabs-jobs-search-switcher" id="job-switcher-tab" role="tab">
+                        Jobs
+                    </button>
+</li>
+<li class="switcher-tabs__tab h-[44px] babybear:basis-1/2" role="presentation">
+<button aria-controls="people-search-panel" aria-selected="false" class="switcher-tabs__button w-full h-full tab-md papabear:tab-vertical mamabear:tab-vertical papabear:justify-start mamabear:justify-start cursor-pointer" data-switcher-type="PEOPLE" data-tracking-control-name="learning-course_switcher-tabs-people-search-switcher" id="people-switcher-tab" role="tab">
+                        People
+                    </button>
+</li>
+<li class="switcher-tabs__tab h-[44px] babybear:basis-1/2" role="presentation">
+<button aria-controls="learning-search-panel" aria-selected="true" class="switcher-tabs__button w-full h-full tab-md papabear:tab-vertical mamabear:tab-vertical papabear:justify-start mamabear:justify-start cursor-pointer tab-selected" data-switcher-type="LEARNING" data-tracking-control-name="learning-course_switcher-tabs-learning-search-switcher" id="learning-switcher-tab" role="tab">
+                        Learning
+                    </button>
+</li>
+</ul>
+<button aria-label="Close" class="switcher-tabs__cancel-btn papabear:hidden mamabear:hidden block w-6 h-6 m-auto text-color-text-low-emphasis" data-tracking-control-name="learning-course_switcher-tabs-cancel-search-switcher" type="button">
+<icon class="switcher-tabs__cancel-icon block w-3 h-3 m-auto onload" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cs55jggk4p3uqh9ozxdmpvjg7"></icon>
+</button>
+</div>
+</div>
+<section aria-labelledby="people-switcher-tab" class="base-search-bar w-full h-full" data-searchbar-type="PEOPLE" id="people-search-panel" role="tabpanel">
+<form action="/pub/dir" class="base-search-bar__form w-full flex babybear:mx-mobile-container-padding babybear:flex-col" data-tracking-control-name="learning-course_people-search-bar_base-search-bar-form" role="search">
+<section class="dismissable-input text-input !pr-3 bg-color-transparent flex items-center h-[40px] min-w-0 relative babybear:w-full babybear:mb-1 search-input">
+<input aria-label="First Name" autocomplete="on" class="dismissable-input__input font-sans text-md text-color-text bg-color-transparent flex items-center flex-1 focus:outline-none placeholder:text-color-text-secondary" data-tracking-control-name="learning-course_people-search-bar_first-name_dismissable-input" maxlength="500" name="firstName" placeholder="First Name" type="search"/>
+<button class="dismissable-input__button text-color-text h-[40px] min-w-[24px] w-[24px] -mr-2 opacity-0 transition-opacity duration-[0.1s] disabled:invisible focus:opacity-100" data-tracking-control-name="learning-course_people-search-bar_first-name_dismissable-input-clear" type="button">
+<label class="sr-only">Dismiss</label>
+<icon class="dismissable-input__button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cs55jggk4p3uqh9ozxdmpvjg7"></icon>
+</button>
+</section>
+<section class="dismissable-input text-input !pr-3 bg-color-transparent flex items-center h-[40px] min-w-0 relative babybear:w-full babybear:mb-1 search-input">
+<input aria-label="Last Name" autocomplete="on" class="dismissable-input__input font-sans text-md text-color-text bg-color-transparent flex items-center flex-1 focus:outline-none placeholder:text-color-text-secondary" data-tracking-control-name="learning-course_people-search-bar_last-name_dismissable-input" maxlength="500" name="lastName" placeholder="Last Name" type="search"/>
+<button class="dismissable-input__button text-color-text h-[40px] min-w-[24px] w-[24px] -mr-2 opacity-0 transition-opacity duration-[0.1s] disabled:invisible focus:opacity-100" data-tracking-control-name="learning-course_people-search-bar_last-name_dismissable-input-clear" type="button">
+<label class="sr-only">Dismiss</label>
+<icon class="dismissable-input__button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cs55jggk4p3uqh9ozxdmpvjg7"></icon>
+</button>
+</section>
+<input name="trk" type="hidden" value="learning-course_people-search-bar_search-submit"/>
+<button aria-label="Search" class="base-search-bar__submit-btn block basis-[40px] flex-shrink-0 cursor-pointer babybear:invisible babybear:ml-[-9999px] babybear:w-[1px] babybear:h-[1px]" data-tracking-control-name="learning-course_people-search-bar_base-search-bar-search-submit" type="submit">
+<icon class="base-search-bar__search-icon onload mx-auto" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cb5bsr4tsn2r4sjg9e3ls4tjl"></icon>
+</button>
+</form>
+</section>
+<section aria-labelledby="job-switcher-tab" class="base-search-bar w-full h-full" data-searchbar-type="JOBS" id="jobs-search-panel" role="tabpanel">
+<form action="/jobs/search" class="base-search-bar__form w-full flex babybear:mx-mobile-container-padding babybear:flex-col" data-tracking-control-name="learning-course_jobs-search-bar_base-search-bar-form" role="search">
+<code id="i18n_aria_live_text_no-suggestions" style="display: none"><!--"No suggestions found"--></code>
+<code id="i18n_aria_live_text_one-suggestion" style="display: none"><!--"One Suggestion. Use up and down keys to navigate"--></code>
+<code id="i18n_aria_live_text_multiple-suggestions" style="display: none"><!--"Multiple Suggestions. Use up and down keys to navigate"--></code>
+<section class="dismissable-input text-input !pr-3 bg-color-transparent flex items-center h-[40px] min-w-0 relative babybear:w-full babybear:mb-1 typeahead-input keywords-typeahead-input text-input">
+<input aria-autocomplete="list" aria-controls="job-search-bar-keywords-typeahead-list" aria-haspopup="listbox" aria-label="Search job titles or companies" autocomplete="off" class="dismissable-input__input font-sans text-md text-color-text bg-color-transparent flex items-center flex-1 focus:outline-none placeholder:text-color-text-secondary" data-tracking-control-name="learning-course_dismissable-input" id="job-search-bar-keywords" maxlength="500" name="keywords" placeholder="Search job titles or companies" role="combobox" type="search"/>
+<!-- --> <div class="typeahead-input__dropdown container-lined absolute top-[calc(100%+3px)] left-0 w-full rounded-b-md rounded-t-none z-[10] overflow-hidden max-w-none babybear:min-w-full babybear:bottom-0 babybear:overflow-y-auto">
+<template class="typeahead-item-template">
+<li class="typeahead-input__dropdown-item py-1.5 px-2 hover:cursor-pointer hover:bg-color-surface-new-hover hover:border-y-2 hover:border-solid hover:border-color-container-primary" role="option">
+<span class="typeahead-input__dropdown-text font-sans text-sm font-bold text-color-text"></span>
+</li>
+</template>
+<ul class="typeahead-input__dropdown-list w-full" id="job-search-bar-keywords-typeahead-list" role="listbox"></ul>
+</div>
+<!-- -->
+<button class="dismissable-input__button text-color-text h-[40px] min-w-[24px] w-[24px] -mr-2 opacity-0 transition-opacity duration-[0.1s] disabled:invisible focus:opacity-100" data-tracking-control-name="learning-course_dismissable-input-clear" type="button">
+<label class="sr-only">Dismiss</label>
+<icon class="dismissable-input__button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cs55jggk4p3uqh9ozxdmpvjg7"></icon>
+</button>
+</section>
+<!-- -->
+<code id="i18n_aria_live_text_no-suggestions" style="display: none"><!--"No suggestions found"--></code>
+<code id="i18n_aria_live_text_one-suggestion" style="display: none"><!--"One Suggestion. Use up and down keys to navigate"--></code>
+<code id="i18n_aria_live_text_multiple-suggestions" style="display: none"><!--"Multiple Suggestions. Use up and down keys to navigate"--></code>
+<section class="dismissable-input text-input !pr-3 bg-color-transparent flex items-center h-[40px] min-w-0 relative babybear:w-full babybear:mb-1 typeahead-input location-typeahead-input">
+<input aria-autocomplete="list" aria-controls="job-search-bar-location-typeahead-list" aria-haspopup="listbox" aria-label="Location" autocomplete="off" class="dismissable-input__input font-sans text-md text-color-text bg-color-transparent flex items-center flex-1 focus:outline-none placeholder:text-color-text-secondary" data-tracking-control-name="learning-course_dismissable-input" id="job-search-bar-location" maxlength="500" name="location" placeholder="Location" role="combobox" type="search" value="Fort Wayne, IN"/>
+<!-- --> <div class="typeahead-input__dropdown container-lined absolute top-[calc(100%+3px)] left-0 w-full rounded-b-md rounded-t-none z-[10] overflow-hidden max-w-none babybear:min-w-full babybear:bottom-0 babybear:overflow-y-auto">
+<template class="typeahead-item-template">
+<li class="typeahead-input__dropdown-item py-1.5 px-2 hover:cursor-pointer hover:bg-color-surface-new-hover hover:border-y-2 hover:border-solid hover:border-color-container-primary" role="option">
+<span class="typeahead-input__dropdown-text font-sans text-sm font-bold text-color-text"></span>
+</li>
+</template>
+<ul class="typeahead-input__dropdown-list w-full" id="job-search-bar-location-typeahead-list" role="listbox"></ul>
+</div>
+<!-- -->
+<button class="dismissable-input__button text-color-text h-[40px] min-w-[24px] w-[24px] -mr-2 opacity-0 transition-opacity duration-[0.1s] disabled:invisible focus:opacity-100" data-tracking-control-name="learning-course_dismissable-input-clear" type="button">
+<label class="sr-only">Dismiss</label>
+<icon class="dismissable-input__button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cs55jggk4p3uqh9ozxdmpvjg7"></icon>
+</button>
+</section>
+<input name="geoId" type="hidden" value="100346723"/>
+<input name="trk" type="hidden" value="learning-course_jobs-search-bar_search-submit"/>
+<button aria-label="Search" class="base-search-bar__submit-btn block basis-[40px] flex-shrink-0 cursor-pointer babybear:invisible babybear:ml-[-9999px] babybear:w-[1px] babybear:h-[1px]" data-tracking-control-name="learning-course_jobs-search-bar_base-search-bar-search-submit" type="submit">
+<icon class="base-search-bar__search-icon onload mx-auto" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cb5bsr4tsn2r4sjg9e3ls4tjl"></icon>
+</button>
+</form>
+</section>
+<section aria-labelledby="learning-switcher-tab" class="base-search-bar w-full h-full" data-searchbar-type="LEARNING" id="learning-search-panel" role="tabpanel">
+<form action="/learning/search" class="base-search-bar__form w-full flex babybear:mx-mobile-container-padding babybear:flex-col" data-tracking-control-name="learning-course_learning-search-bar_base-search-bar-form" role="search">
+<section class="dismissable-input text-input !pr-3 bg-color-transparent flex items-center h-[40px] min-w-0 relative babybear:w-full babybear:mb-1 search-input">
+<input aria-label="Search skills, subjects, or software" autocomplete="on" class="dismissable-input__input font-sans text-md text-color-text bg-color-transparent flex items-center flex-1 focus:outline-none placeholder:text-color-text-secondary" data-tracking-control-name="learning-course_learning-search-bar_keywords_dismissable-input" maxlength="500" name="keywords" placeholder="Search skills, subjects, or software" type="search"/>
+<button class="dismissable-input__button text-color-text h-[40px] min-w-[24px] w-[24px] -mr-2 opacity-0 transition-opacity duration-[0.1s] disabled:invisible focus:opacity-100" data-tracking-control-name="learning-course_learning-search-bar_keywords_dismissable-input-clear" type="button">
+<label class="sr-only">Dismiss</label>
+<icon class="dismissable-input__button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cs55jggk4p3uqh9ozxdmpvjg7"></icon>
+</button>
+</section>
+<input class="nav__search-uoo" name="upsellOrderOrigin" type="hidden"/>
+<input name="trk" type="hidden" value="learning-course_learning-search-bar_search-submit"/>
+<button aria-label="Search" class="base-search-bar__submit-btn block basis-[40px] flex-shrink-0 cursor-pointer babybear:invisible babybear:ml-[-9999px] babybear:w-[1px] babybear:h-[1px]" data-tracking-control-name="learning-course_learning-search-bar_base-search-bar-search-submit" type="submit">
+<icon class="base-search-bar__search-icon onload mx-auto" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cb5bsr4tsn2r4sjg9e3ls4tjl"></icon>
+</button>
+</form>
+</section>
+<!-- --> <div aria-live="polite" class="search-bar__live-text sr-only" role="status"></div>
+</section>
+<!-- -->
+<div class="nav__cta-container order-3 flex gap-x-1 justify-end min-w-[100px] flex-nowrap flex-shrink-0 babybear:flex-wrap flex-2">
+<a class="nav__button-tertiary btn-md btn-tertiary" data-test-live-nav-primary-cta="" data-tracking-control-name="lil_upsell_nav_subscription" data-tracking-impression-name="lil_upsell_nav_subscription" data-tracking-will-navigate="" href="http://www.linkedin.com/learning/subscription/products?courseSlug=python-for-data-science-essential-training-part-1&amp;destRedirectURL=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Flearning%2Fpython-for-data-science-essential-training-part-1%2Fnavigablestring-objects&amp;upsellTrk=lil_upsell_nav_subscription&amp;session_redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fpython-for-data-science-essential-training-part-1&amp;trk=learning-course_nav-header-join">
+      Start free trial
+    </a>
+<a class="nav__button-secondary btn-md btn-secondary-emphasis" data-tracking-control-name="learning-course_nav-header-signin" data-tracking-will-navigate="" href="https://www.linkedin.com/learning-login/?redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Flearning%2Fpython-for-data-science-essential-training-part-1&amp;fromSignIn=true&amp;session_redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fpython-for-data-science-essential-training-part-1&amp;trk=learning-course_nav-header-signin">
+          Sign in
+      </a>
+<a aria-label="Sign in" class="nav__link-person papabear:hidden mamabear:hidden" data-tracking-control-name="learning-course_nav-header-signin" data-tracking-will-navigate="" href="https://www.linkedin.com/learning-login/?redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Flearning%2Fpython-for-data-science-essential-training-part-1&amp;fromSignIn=true&amp;session_redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fpython-for-data-science-essential-training-part-1&amp;trk=learning-course_nav-header-signin">
+<img alt="" class="inline-block relative rounded-[50%] w-4 h-4 bg-color-entity-ghost-background" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/9c8pery4andzj6ohjkjp54ma2" data-ghost-classes="bg-color-entity-ghost-background" data-ghost-url="https://static.licdn.com/aero-v1/sc/h/9c8pery4andzj6ohjkjp54ma2"/>
+</a>
+</div>
+<!-- -->
+<!-- --> </nav>
+</header>
+<!-- -->
+<div class="cta-banner">
+<div class="enterprise-nav">
+<div class="enterprise-nav__content-wrapper">
+<p class="enterprise-nav__content" id="enterprise-nav-solutions" tabindex="-1">
+            Solutions for:
+          </p>
+<a aria-labelledby="enterprise-nav-solutions business-nav-business" class="enterprise-nav__content" data-tracking-control-name="learning-course_enterprise-nav" data-tracking-will-navigate="true" href="https://learning.linkedin.com/for-entire-companies?src=li-learning-nav&amp;trk=learning-course_enterprise-nav" id="business-nav-business">Business</a>
+<a aria-labelledby="enterprise-nav-solutions business-nav-education" class="enterprise-nav__content" data-tracking-control-name="learning-course_enterprise-nav" data-tracking-will-navigate="true" href="https://learning.linkedin.com/for-higher-education?src=li-learning-nav&amp;trk=learning-course_enterprise-nav" id="business-nav-education">Higher Education</a>
+<a aria-labelledby="enterprise-nav-solutions business-nav-government" class="enterprise-nav__content" data-tracking-control-name="learning-course_enterprise-nav" data-tracking-will-navigate="true" href="https://learning.linkedin.com/for-governments?src=li-learning-nav&amp;trk=learning-course_enterprise-nav" id="business-nav-government">Government</a>
+<a aria-labelledby="enterprise-nav-solutions business-nav-buy" class="enterprise-nav__content" data-test-live-enterprise-upsell="true" data-tracking-control-name="learning-course_enterprise-nav" data-tracking-impression-name="lil_upsell_learning-course_enterprise-nav_teambuy" data-tracking-will-navigate="true" href="/learning/subscription/teams?veh=lil_upx&amp;src=li-learning-nav&amp;trk=learning-course_enterprise-nav" id="business-nav-buy">Buy for my team</a>
+</div>
+</div>
+<!-- -->
+<!-- -->
+</div>
+<main class="main papabear:flex papabear:w-content-max-w papabear:mx-auto papabear:pt-desktop-content-top-margin mamabear:pt-desktop-content-top-margin" id="main-content" role="main">
+<section class="core-rail mx-auto papabear:w-core-rail-width mamabear:max-w-[790px] babybear:max-w-[790px]">
+<p class="pre-headline">
+              
+    
+
+    From the course: <a class="from-the-course__link" data-tracking-control-name="course_title" data-tracking-will-navigate="true" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1?trk=course_title">Python for Data Science Essential Training Part 1</a>
+</p>
+<section class="top-card">
+<section class="top-card-layout container-lined overflow-hidden babybear:rounded-[0px]">
+<section class="top-card__video-wrapper">
+<div class="top-card__video">
+<!-- -->
+<div class="share-native-video">
+<video class="share-native-video__node video-js" data-captions-url="https://www.linkedin.com/ambry/?x-li-ambry-ep=AQLHftHiv4NtlAAAAYzLlRAXZv2aIwh0I08aDtjPSZ5QxlDHOFTyv2wujJjbBTV3es_63U_gCFuGEy1ciEbyCSeF3xklC7nLEq18wf9wFVvpQSpDPAaAQ-2KMNc2kCpJlOn3VBRtpKNNYovm5WSRWwpAXF_IMQ-4nTwRBIgbxr8L1u4TXRA3L6QNeKqRC0RotE7xF2ejgZE8mFBu0TbSRbioyw-3iuDHzlYPhTbiUzYmX4syaj3LOvMfggKv0BNVjiTaNcNYg0w8MicqrUVp1Fq7744ngrkKKV4VkprQ9l8iq-Kl9x_uRij6IFsj71vTSu7vflDof6Cr6A3ZjGuXiKDFvBJ517ZOo-RLlGBEhTBBm8WVPGzfdrx8tDu4eSom5a_8Hy1JMVv8HXUXzOXa7UvlNb8bWoPSWHBEshCz_4lyYK3bK5egyPOCXQurXa_PNdgHRs0mXXnPqMTNn-8Tc1izabB3O2VFLV-p7DIHuiuqzyD5F6_ZRaVTQqUV" data-digitalmedia-asset-urn="urn:li:lyndaVideo:(urn:li:lyndaCourse:5025803,2253729)" data-poster-url="https://media.licdn.com/dms/image/C4E0DAQHgyyvv2PhNpw/learning-public-crop_675_1200/0/1571768552078?e=2147483647&amp;v=beta&amp;t=E6TKuG3aFoXD-Z7LrGdzgo86BbZZSn_Iaw4rB4vWtoI" data-sources='[{"src":"https://dms.licdn.com/playlist/vid/C4D0DAQEfwGKaZnc__Q/learning-original-video-vbr-540/0/1598836897213?e=1704830400&amp;v=beta&amp;t=97KsK8-DhyZFjcXJLHQ_wXJD9S3NwRp3GPXqGg1qfyk#.mp4"}]' data-tracking-id="+dQdw0SgSqWUlSsCchwNGA==" playsinline="">
+</video>
+</div>
+</div>
+</section>
+<div class="top-card-layout__card relative p-2 papabear:p-details-container-padding">
+<div class="top-card-layout__entity-info-container flex flex-wrap papabear:flex-nowrap">
+<div class="top-card-layout__entity-info flex-grow flex-shrink-0 basis-0 babybear:flex-none babybear:w-full babybear:flex-none babybear:w-full">
+<h1 class="top-card-layout__title font-sans text-lg papabear:text-xl font-bold leading-open text-color-text mb-0">
+                    NavigableString objects - <a data-tracking-control-name="video_title_to_software_topic" data-tracking-will-navigate="true" href="https://www.linkedin.com/learning/topics/python?trk=video_title_to_software_topic">Python</a> Tutorial
+                    
+                  </h1>
+<h2 class="top-card-layout__headline break-words font-sans text-md leading-open text-color-text">
+                    
+          
+    
+
+    From the course: <a class="from-the-course__link" data-tracking-control-name="course_title" data-tracking-will-navigate="true" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1?trk=course_title">Python for Data Science Essential Training Part 1</a>
+</h2>
+<!-- -->
+<!-- -->
+<div class="top-card-layout__cta-container flex flex-wrap mt-0.5 papabear:mt-0 ml-[-12px]">
+<a class="top-card__upsell-link top-card-layout__cta mt-2 ml-1.5 h-auto babybear:flex-auto top-card-layout__cta--primary btn-md btn-primary" data-litms-tracking-control-name="lil_upsell_course_info_subscription" data-test-live-course-sub-upsell="" data-tracking-control-name="lil_upsell_course_info_subscription" data-tracking-impression-name="lil_upsell_course_info_subscription" data-tracking-will-navigate="" href="http://www.linkedin.com/learning/subscription/products?courseSlug=python-for-data-science-essential-training-part-1&amp;destRedirectURL=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Flearning%2Fpython-for-data-science-essential-training-part-1%2Fnavigablestring-objects&amp;upsellTrk=lil_upsell_course_info_subscription&amp;trk=course_info">
+        
+                Start my 1-month free trial
+              
+    </a>
+<form action="/learning/subscription/purchaseContent" class="buy-course-upsell__form" method="get">
+<input name="csrfToken" type="hidden" value="ajax:9195686438583566149"/>
+<input name="trk" type="hidden" value=""/>
+<input name="upsellTrk" type="hidden" value="lil_upsell_course_info_purchase"/>
+<input name="upsellOrderOrigin" type="hidden" value=""/>
+<input name="upsellTrackingId" type="hidden" value=""/>
+<input name="lipi" type="hidden" value=""/>
+<input name="learningContentUrn" type="hidden" value="urn:li:lyndaCourse:5025803"/>
+<input name="courseSlug" type="hidden" value="python-for-data-science-essential-training-part-1"/>
+<input name="applyCourseDiscount" type="hidden" value="false"/>
+<button class="top-card-layout__cta mt-2 ml-1.5 h-auto babybear:flex-auto top-card-layout__cta--secondary btn-md btn-secondary" data-is-purchase="true" data-litms-tracking-control-name="lil_upsell_course_info_purchase" data-test-live-course-alc-upsell="" data-tracking-control-name="lil_upsell_course_info_purchase" data-tracking-impression-name="lil_upsell_course_info_purchase" type="submit">
+          Buy this course ($44.99*)
+      </button>
+</form>
+</div>
+</div>
+<!-- --> </div>
+<!-- -->
+<!-- --> </div>
+</section>
+</section>
+<div class="details mx-details-container-padding">
+<div class="tabs content-tabs" data-tab-id="course-content-tabs">
+<ul class="tabs__list" role="tablist">
+<!-- -->
+<li class="tab flex ml-3 first-of-type:ml-0" role="presentation">
+<button aria-selected="true" class="tab-button tab-md tab-selected" data-id="tab__button" data-tracking-control-name="transcripts-tab" id="content-tabs__transcripts-btn" role="tab">
+          
+          Transcripts
+      </button>
+</li>
+<li class="tab flex ml-3 first-of-type:ml-0" role="presentation">
+<button aria-selected="false" class="tab-button tab-md" data-id="tab__button" data-test-live-exercise-files-tab="" data-tracking-control-name="files-tab" id="content-tabs__files-btn" role="tab" tabindex="-1">
+          
+          Exercise Files
+      </button>
+</li>
+<li class="tab flex ml-3 first-of-type:ml-0" role="presentation">
+<button aria-selected="false" class="tab-button tab-md" data-id="tab__button" data-test-live-offline-tab="" data-tracking-control-name="offline-tab" id="content-tabs__offline-btn" role="tab" tabindex="-1">
+          
+          View Offline
+      </button>
+</li>
+</ul>
+<!-- -->
+<div class="tab__panel" role="tabpanel" tabindex="0">
+<section class="core-section-container my-3 transcripts">
+<!-- -->
+<h2 class="core-section-container__title section-title">
+            NavigableString objects
+          </h2>
+<!-- -->
+<div class="core-section-container__content break-words">
+<div class="transcripts__copy">
+<span class="transcripts__quotation">“</span>
+<p>
+                 - [Teacher] Now that we've finished with tag objects    let's start looking at the NavigatableString object.    The first thing we want to do is make sure    that you have installed Beautiful Soup    and you would do that through the Anaconda command line.    I showed you how to do that in section 6.1.    So in this case we have already installed Beautiful Soup    and then we just want to check to make sure    that our version of Python is compatible    with the demonstration we've about to do.    So this notebook was written for Python 3.7    and let's just check the version we are running here.    So I'll say import sys and then    I'll just print the sys version.    Run that and okay, cool.    So we are at 3.7.    So next let's go ahead and import    Beautiful Soup into this environment.    So we will say from BS4 import Beautiful Soup, and run that.    Now we have our Beautiful Soup library    imported into our IPython environment.    Now in this demonstration I'm going to show you    how to work with NavigatableString objects.    NavigatableString objects are used as containers    for chunks of text that are stored inside of tags.    So let's just go back to our example    from 6.1 with the soup object.    We'll create a variable here called soup_object    and then we will call the Beautiful Soup    constructor and let's pass an H1 tag.    So we'll create a string and the open tag    is going to be H1 attribute_1="heading level 1"    and then it's going to read the Future Trends in IOT in 2018.    Future trends in IOT in 2018 and then    we will just close this H1 tag.    Okay.    Okay so it looks like I put a quote there    which I didn't need to put so I need to remove that,    and then we have two quotes there    so clean this up a little bit.    Now we want this to be read in as LXML    so let's just pass a parameter that says that.    LXML, okay, and then I'll just double check my syntax    and everything that I've typed out here.    Now let's create and object called tag    and assign it the name H1.    So to do that we'll just say tag is equal to soup_object.H1,    and then let's call the type method    on the tag object to verify that we have    actually indeed created a tag object.    So we'll say type and then pass in    our tag object and run this, and okay,    so you can see that we have indeed created a tag object here    and so let's verify the name of that tag.    It should be H1 so I'll just write tag.name and run that    and yes it is indeed H1 so we have an H1 tag,    but if you just wanted to isolate this string object    from within this tag object then what you can do    is you just say tag.string and it'll print out the string.    Cool, so here we have it, that's our string    from within this tag, so it's right there.    I want to show you here how actually tag.string    is a separate object of it's own.    So let's go ahead and just go to type function    and then pass in tag.string, and when we run this    we see that tag.string is actually a NavigatableString.    So let's play with this a little bit.    I will create a new variable and let's call it    our_navigatable_string and all sides are equal    to tag.string and then print it out.    I'll just copy this and run that.    So basically what this is saying is that our    NavigatableString is now this Future Trends in IOT in 2018.    If you wanted to replace the string object    from within the NavigatableString    you can just call the replace with method    off of the NavigatableString and then    pass in a replacement string.    So let's try that out and we will just replace    this Future Trends for IOT in 2018 with NaN.    So let's just try this out.    We're going to say our navigatable string    and call the replace_with method    and we will pass in Not a Number, so NaN    and then just print our string again.    So we will then say tag.string and see what it prints out,    and as you can see now our string is just not a number.    We have replaced this Future Trends    in IOT with Not a Number.    Okay, now let's look at how to utilize NavigatableStrings.    So I'm giving you this HTML document    and this is going to come preloaded in your Jupyter notebook    just because it's easier for us    to use for demonstration purposes,    and what we're going to do is we're    going to convert this to a parse tree    like we did in the previous section.    So right now I'll just run this cell.    If there is one or more string object    within a parse tree you can easily isolate them.    One way to do that is by calling    the stripped strings generator    to return all of the strings within the object    where string is consisting entirely    of white space are ignored and white space    at the beginning and end of the strings is removed.    So for this example, for each string object    in the parse tree this stripped strings generator    passes through, strips white spaces,    and then prints out each string    that contains a printable representation.    So let's just try this out here.    We'll say for string in our soup object,    we'll call stripped strings and then    for each of these stripped strings    let's just print out a representation of that string.    So put a colon, new line I'm going to say    call it print function, and we want to print    a representation of the string.    So we'll just write REPR and then    pass in the string and then run this.    All right, so now you can see that our strings    have been pretty much cleaned up.    We just have a list of strings here without the tags    or any of the mark up within the body    of this series of strings.    The last thing I want to show you in this demonstration    is how to access parent tag objects within a parse tree.    So let's create a new object called first_link    and then we'll just set it equal to    the A tag from within the parse tree.    First link is equal to our_soup_object.a,    okay and then we'll print out our first link.    Okay cool, so this is actually the first link    in our document and the text that it contains.    So in out document it would be this text here    is actually clickable and it redirects to a bit.ly link,    and if we wanted to access the parent of that first link    we could just say first link, first_link.parent,    and we see that we now have the    parent tag of this first link.    Now the NavigatableString object of first link    is a string that reads last month    Ericsson Digital invited me.    Let me show you.    We will say first_link and then we're just going to    look for the string, so we're going to take that string,    we run that, and we're basically going into this link    and pulling only the string from within it, right.    So that is now printed out as the string object,    and lastly we can also retrieve    the parent of that NavigatableString object.    To do that we would just say first_link.string.parent    and run that.    So in this case the parent of the NavigatableString    is the A tag which is sort of self evident, right.    So now that you know how to work    with objects in Beautiful Soup    we're going to go into using Beautiful Soup for data parsing.    
+            </p>
+</div>
+</div>
+</section>
+</div>
+<div class="tab__panel" hidden="" role="tabpanel" tabindex="0">
+<section class="core-section-container my-3 exercise-files" data-test-live-files-panel="">
+<!-- -->
+<h2 class="core-section-container__title section-title">
+            Practice while you learn with exercise files
+          </h2>
+<!-- -->
+<div class="core-section-container__content break-words">
+<p class="exercise-files__description">
+          Download the files the instructor uses to teach the course. Follow along and learn by watching, listening and practicing.
+        </p>
+<ul class="exercise-files__list">
+<li class="exercise-files__file">
+<a class="exercise-files__file-upsell-link" data-litms-tracking-control-name="lil_upsell_exercise_file_subscription" data-test-live-files-sub-upsell="" data-tracking-control-name="lil_upsell_exercise_file_subscription" data-tracking-impression-name="lil_upsell_exercise_file_subscription" data-tracking-will-navigate="" href="http://www.linkedin.com/learning/subscription/products?courseSlug=python-for-data-science-essential-training-part-1&amp;destRedirectURL=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Flearning%2Fpython-for-data-science-essential-training-part-1%2Fnavigablestring-objects&amp;upsellTrk=lil_upsell_exercise_file_subscription&amp;trk=exercise_file">
+<span class="exercise-files__lock-icon-container">
+<span class="a11y-text">
+                      Exercise File: Subscribe to access.
+                    </span>
+<icon class="exercise-files__lock-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/1gnb324cexst19zukupplmvva"></icon>
+</span>
+<span class="exercise-files__file-name">
+                    Ex_Files_Python_Data_Science_EssT_Pt_1.zip
+                  </span>
+</a>
+</li>
+</ul>
+<div class="footer-upsell-link">
+<span class="footer-upsell-link__description">
+        Download the exercise files for this course.
+      </span>
+<a class="exercise-files__upsell-link" data-litms-tracking-control-name="lil_upsell_exercise_file_subscription" data-test-live-files-footer-sub-upsell="" data-tracking-control-name="lil_upsell_exercise_file_subscription" data-tracking-impression-name="lil_upsell_exercise_file_subscription" data-tracking-will-navigate="" href="http://www.linkedin.com/learning/subscription/products?courseSlug=python-for-data-science-essential-training-part-1&amp;destRedirectURL=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Flearning%2Fpython-for-data-science-essential-training-part-1%2Fnavigablestring-objects&amp;upsellTrk=lil_upsell_exercise_file_subscription&amp;trk=exercise_file">
+        
+          Get started with a free trial today.
+        
+    </a>
+</div>
+</div>
+</section>
+</div>
+<div class="tab__panel" hidden="" role="tabpanel" tabindex="0">
+<section class="core-section-container my-3 offline">
+<!-- -->
+<h2 class="core-section-container__title section-title">
+            Download courses and learn on the go
+          </h2>
+<!-- -->
+<div class="core-section-container__content break-words">
+<p class="offline__description">
+          Watch courses on your mobile device without an internet connection. Download courses using your iOS or Android LinkedIn Learning app.
+        </p>
+<div class="offline__link-container">
+<a class="offline__link" data-tracking-control-name="apple_app_store" data-tracking-will-navigate="" href="https://itunes.apple.com/app/apple-store/id1084807225?ls=1&amp;pt=10746&amp;mt=8&amp;ct=learning_course_tab_viewoffline&amp;trk=apple_app_store" rel="noopener noreferrer" target="_blank">
+<img alt="Download on the App Store" class="offline__image" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/emczv26hz24woii2j4aleyry"/>
+</a>
+<a class="offline__link" data-tracking-control-name="google_play_store" data-tracking-will-navigate="" href="https://play.google.com/store/apps/details?id=com.linkedin.android.learning&amp;referrer=utm_source%3Dlinkedinlearning%26utm_medium%3DmobileWeb%26utm_campaign%3Dlearning_guest&amp;ct=learning_course_tab_viewoffline&amp;trk=google_play_store" rel="noopener noreferrer" target="_blank">
+<img alt="Get it on Google Play" class="offline__image" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/535kqf5rsexfx0lucb3t6palb"/>
+</a>
+</div>
+<div class="footer-upsell-link">
+<span class="footer-upsell-link__description">
+        Watch this course anytime, anywhere.
+      </span>
+<a class="offline__upsell-link" data-litms-tracking-control-name="lil_upsell_offline_viewing_subscription" data-test-live-offline-footer-sub-upsell="" data-tracking-control-name="lil_upsell_offline_viewing_subscription" data-tracking-impression-name="lil_upsell_offline_viewing_subscription" data-tracking-will-navigate="" href="http://www.linkedin.com/learning/subscription/products?courseSlug=python-for-data-science-essential-training-part-1&amp;destRedirectURL=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Flearning%2Fpython-for-data-science-essential-training-part-1%2Fnavigablestring-objects&amp;upsellTrk=lil_upsell_offline_viewing_subscription&amp;trk=offline_viewing">
+        
+          Get started with a free trial today.
+        
+    </a>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section class="right-rail papabear:w-right-rail-width papabear:ml-column-gutter mamabear:max-w-[790px] mamabear:px-mobile-container-padding babybear:max-w-[790px] babybear:px-mobile-container-padding">
+<section class="table-of-contents mb-4">
+<h2 class="table-of-contents__header">
+          Contents
+        </h2>
+<ul class="table-of-contents__list">
+<li class="toc-section">
+<div class="show-more-less">
+<button aria-expanded="false" class="show-more-less__button show-more-less__more-button show-more-less-button" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            Introduction
+        
+              <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cyolgscd0imw2ldqppkrb84vo"></icon>
+</button>
+<button aria-expanded="false" class="show-more-less__button show-more-less__less-button show-more-less-button show-more-less__button--hide" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            Introduction
+        
+              <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/4chtt12k98xwnba1nimld2oyg"></icon>
+</button>
+<ul class="show-more-less__list show-more-less__list--hide-after-0" data-impression-id="learning-course_toc-section_show-more-less" data-max-num-to-show="0">
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/data-science-life-hacks?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--unlocked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/2cal8hyvmirn7m2tok5d2d9gi" data-svg-class-name="table-of-contents__item-status-svg--unlocked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Data science life hacks
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        32s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/what-you-should-know?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--unlocked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/2cal8hyvmirn7m2tok5d2d9gi" data-svg-class-name="table-of-contents__item-status-svg--unlocked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      What you should know
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        39s
+  
+                    </div>
+</div>
+</a>
+</li>
+</ul>
+<!-- --> </div>
+</li>
+<li class="toc-section">
+<div class="show-more-less">
+<button aria-expanded="false" class="show-more-less__button show-more-less__more-button show-more-less-button" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            1. Introduction to the Data Professions
+        
+              <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cyolgscd0imw2ldqppkrb84vo"></icon>
+</button>
+<button aria-expanded="false" class="show-more-less__button show-more-less__less-button show-more-less-button show-more-less__button--hide" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            1. Introduction to the Data Professions
+        
+              <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/4chtt12k98xwnba1nimld2oyg"></icon>
+</button>
+<ul class="show-more-less__list show-more-less__list--hide-after-0" data-impression-id="learning-course_toc-section_show-more-less" data-max-num-to-show="0">
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/introduction-to-the-data-professions?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Introduction to the data professions
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        9m 7s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/the-four-flavors-of-data-analysis?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--unlocked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/2cal8hyvmirn7m2tok5d2d9gi" data-svg-class-name="table-of-contents__item-status-svg--unlocked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      The four flavors of data analysis
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        3m 16s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/why-use-python-for-analytics?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Why use Python for analytics?
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        4m 22s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/high-level-course-road-map?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      High-level course road map
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        1m 28s
+  
+                    </div>
+</div>
+</a>
+</li>
+</ul>
+<!-- --> </div>
+</li>
+<li class="toc-section">
+<div class="show-more-less">
+<button aria-expanded="false" class="show-more-less__button show-more-less__more-button show-more-less-button" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            2. Data Preparation Basics
+        
+              <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cyolgscd0imw2ldqppkrb84vo"></icon>
+</button>
+<button aria-expanded="false" class="show-more-less__button show-more-less__less-button show-more-less-button show-more-less__button--hide" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            2. Data Preparation Basics
+        
+              <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/4chtt12k98xwnba1nimld2oyg"></icon>
+</button>
+<ul class="show-more-less__list show-more-less__list--hide-after-0" data-impression-id="learning-course_toc-section_show-more-less" data-max-num-to-show="0">
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/filtering-and-selecting?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Filtering and selecting
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        15m 25s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/treating-missing-values?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Treating missing values
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        15m 9s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/removing-duplicates?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Removing duplicates
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        6m 18s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/concatenating-and-transforming?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--unlocked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/2cal8hyvmirn7m2tok5d2d9gi" data-svg-class-name="table-of-contents__item-status-svg--unlocked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Concatenating and transforming
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        10m 8s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/grouping-and-aggregation?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Grouping and aggregation
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        4m 52s
+  
+                    </div>
+</div>
+</a>
+</li>
+</ul>
+<!-- --> </div>
+</li>
+<li class="toc-section">
+<div class="show-more-less">
+<button aria-expanded="false" class="show-more-less__button show-more-less__more-button show-more-less-button" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            3. Data Visualization 101
+        
+              <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cyolgscd0imw2ldqppkrb84vo"></icon>
+</button>
+<button aria-expanded="false" class="show-more-less__button show-more-less__less-button show-more-less-button show-more-less__button--hide" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            3. Data Visualization 101
+        
+              <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/4chtt12k98xwnba1nimld2oyg"></icon>
+</button>
+<ul class="show-more-less__list show-more-less__list--hide-after-0" data-impression-id="learning-course_toc-section_show-more-less" data-max-num-to-show="0">
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/the-three-types-of-data-visualization?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      The three types of data visualization
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        7m 40s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/selecting-optimal-data-graphics?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--unlocked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/2cal8hyvmirn7m2tok5d2d9gi" data-svg-class-name="table-of-contents__item-status-svg--unlocked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Selecting optimal data graphics
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        6m 17s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/communicating-with-color-and-context?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Communicating with color and context
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        4m 38s
+  
+                    </div>
+</div>
+</a>
+</li>
+</ul>
+<!-- --> </div>
+</li>
+<li class="toc-section">
+<div class="show-more-less">
+<button aria-expanded="false" class="show-more-less__button show-more-less__more-button show-more-less-button" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            4. Practical Data Visualization
+        
+              <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cyolgscd0imw2ldqppkrb84vo"></icon>
+</button>
+<button aria-expanded="false" class="show-more-less__button show-more-less__less-button show-more-less-button show-more-less__button--hide" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            4. Practical Data Visualization
+        
+              <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/4chtt12k98xwnba1nimld2oyg"></icon>
+</button>
+<ul class="show-more-less__list show-more-less__list--hide-after-0" data-impression-id="learning-course_toc-section_show-more-less" data-max-num-to-show="0">
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/creating-standard-data-graphics?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Creating standard data graphics
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        8m 42s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/defining-elements-of-a-plot?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Defining elements of a plot
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        9m 6s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/plot-formatting?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Plot formatting
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        12m 8s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/creating-labels-and-annotations?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Creating labels and annotations
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        14m 30s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/visualizing-time-series?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Visualizing time series
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        6m 33s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/creating-statistical-data-graphics?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Creating statistical data graphics
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        9m 59s
+  
+                    </div>
+</div>
+</a>
+</li>
+</ul>
+<!-- --> </div>
+</li>
+<li class="toc-section">
+<div class="show-more-less">
+<button aria-expanded="false" class="show-more-less__button show-more-less__more-button show-more-less-button" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            5. Basic Math and Statistics
+        
+              <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cyolgscd0imw2ldqppkrb84vo"></icon>
+</button>
+<button aria-expanded="false" class="show-more-less__button show-more-less__less-button show-more-less-button show-more-less__button--hide" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            5. Basic Math and Statistics
+        
+              <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/4chtt12k98xwnba1nimld2oyg"></icon>
+</button>
+<ul class="show-more-less__list show-more-less__list--hide-after-0" data-impression-id="learning-course_toc-section_show-more-less" data-max-num-to-show="0">
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/simple-arithmetic?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--unlocked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/2cal8hyvmirn7m2tok5d2d9gi" data-svg-class-name="table-of-contents__item-status-svg--unlocked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Simple arithmetic
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        6m 53s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/basic-linear-algebra?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Basic linear algebra
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        6m 17s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/generating-summary-statistics?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Generating summary statistics
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        9m 46s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/summarizing-categorical-data?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Summarizing categorical data
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        12m 25s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/parametric-correlation-analysis?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Parametric correlation analysis
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        15m 15s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/non-parametric-correlation-analysis?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Non-parametric correlation analysis
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        13m 25s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/transforming-dataset-distributions?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Transforming dataset distributions
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        9m 54s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/extreme-value-analysis-for-outliers?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Extreme value analysis for outliers
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        11m 5s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/multivariate-analysis-for-outliers?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Multivariate analysis for outliers
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        5m 53s
+  
+                    </div>
+</div>
+</a>
+</li>
+</ul>
+<!-- --> </div>
+</li>
+<li class="toc-section">
+<div class="show-more-less">
+<button aria-expanded="true" class="show-more-less__button show-more-less__more-button show-more-less-button show-more-less__button--hide" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            6. Data Sourcing via Web Scraping
+        
+              <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cyolgscd0imw2ldqppkrb84vo"></icon>
+</button>
+<button aria-expanded="true" class="show-more-less__button show-more-less__less-button show-more-less-button" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            6. Data Sourcing via Web Scraping
+        
+              <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/4chtt12k98xwnba1nimld2oyg"></icon>
+</button>
+<ul class="show-more-less__list" data-impression-id="learning-course_toc-section_show-more-less" data-max-num-to-show="0">
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/beautifulsoup-object?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      BeautifulSoup object
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        18m 28s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item toc-item--active">
+<a aria-current="true" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/navigablestring-objects?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--unlocked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/2cal8hyvmirn7m2tok5d2d9gi" data-svg-class-name="table-of-contents__item-status-svg--unlocked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      NavigableString objects
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        10m 1s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/data-parsing?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Data parsing
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        12m 42s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/web-scraping-in-practice?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Web scraping in practice
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        10m 48s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/introduction-to-nlp?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Introduction to NLP
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        12m 31s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/cleaning-and-stemming-textual-data?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Cleaning and stemming textual data
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        7m 47s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/lemmatizing-and-analyzing-textual-data?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Lemmatizing and analyzing textual data
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        10m 15s
+  
+                    </div>
+</div>
+</a>
+</li>
+</ul>
+<!-- --> </div>
+</li>
+<li class="toc-section">
+<div class="show-more-less">
+<button aria-expanded="false" class="show-more-less__button show-more-less__more-button show-more-less-button" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            7. Collaborative Analytics with Plotly
+        
+              <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cyolgscd0imw2ldqppkrb84vo"></icon>
+</button>
+<button aria-expanded="false" class="show-more-less__button show-more-less__less-button show-more-less-button show-more-less__button--hide" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            7. Collaborative Analytics with Plotly
+        
+              <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/4chtt12k98xwnba1nimld2oyg"></icon>
+</button>
+<ul class="show-more-less__list show-more-less__list--hide-after-0" data-impression-id="learning-course_toc-section_show-more-less" data-max-num-to-show="0">
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/introduction-to-plotly?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Introduction to Plotly
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        4m 31s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/create-statistical-charts?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Create statistical charts
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        3m 28s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/line-charts-in-plotly?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Line charts in Plotly
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        6m 29s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/bar-charts-and-pie-charts-in-plotly?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Bar charts and pie charts in Plotly
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        7m 24s
+  
+                    </div>
+</div>
+</a>
+</li>
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/create-statistical-charts-2?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Create statistical charts
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        15m
+  
+                    </div>
+</div>
+</a>
+</li>
+</ul>
+<!-- --> </div>
+</li>
+<li class="toc-section">
+<div class="show-more-less">
+<button aria-expanded="false" class="show-more-less__button show-more-less__more-button show-more-less-button" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            Conclusion
+        
+              <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cyolgscd0imw2ldqppkrb84vo"></icon>
+</button>
+<button aria-expanded="false" class="show-more-less__button show-more-less__less-button show-more-less-button show-more-less__button--hide" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            Conclusion
+        
+              <icon class="show-more-less__button--chevron show-more-less-button-icon" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/4chtt12k98xwnba1nimld2oyg"></icon>
+</button>
+<ul class="show-more-less__list show-more-less__list--hide-after-0" data-impression-id="learning-course_toc-section_show-more-less" data-max-num-to-show="0">
+<li class="toc-item">
+<a aria-current="false" class="toc-item__link" data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1/next-steps?autoplay=true&amp;trk=learning-course_tocItem">
+<icon class="table-of-contents__item-status table-of-contents__item-status--locked" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/397kgg1r9mkldr5uutd2lygzf" data-svg-class-name="table-of-contents__item-status-svg--locked"></icon>
+<div class="table-of-contents__item-details">
+<div class="table-of-contents__item-title">
+                      Next steps
+                    </div>
+<div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        54s
+  
+                    </div>
+</div>
+</a>
+</li>
+</ul>
+<!-- --> </div>
+</li>
+</ul>
+</section>
+</section>
+</main>
+<div class="pre-footer">
+<section class="core-section-container my-3 price-disclaimer">
+<!-- -->
+<!-- -->
+<!-- -->
+<div class="core-section-container__content break-words">
+<p class="price-disclaimer__copy">
+<sup class="price-disclaimer__copy--sup">*</sup>Price may change based on profile and billing country information entered during Sign In or Registration
+      </p>
+</div>
+</section>
+<section class="tw-linkster bg-cool-gray-20 browse-map" data-impression-id="learning-course_linkster" data-js-module-id="linkster">
+<div class="max-w-screen-content-max-w w-full flex justify-between my-0 mx-auto mamabear:px-3 babybear:px-2 babybear:flex-col">
+<div class="flex-1 w-1/2 pt-2 pr-4 pb-4 pl-0 babybear:pb-2 babybear:w-full babybear:border-b-1 babybear:border-solid babybear:border-color-border-low-emphasis babybear:last:border-b-0">
+<h3 class="text-md font-bold text-color-text leading-open">
+            Explore Business Topics
+          </h3>
+<ul class="my-1">
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/business-analysis-and-strategy?trk=learning-course_browsemap_link">
+                Business Analysis and Strategy
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/business-software-and-tools?trk=learning-course_browsemap_link">
+                Business Software and Tools
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/career-development-5?trk=learning-course_browsemap_link">
+                Career Development
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/customer-service-3?trk=learning-course_browsemap_link">
+                Customer Service
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/diversity-equity-and-inclusion-dei?trk=learning-course_browsemap_link">
+                Diversity, Equity, and Inclusion (DEI)
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/finance-and-accounting?trk=learning-course_browsemap_link">
+                Finance and Accounting
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/human-resources-3?trk=learning-course_browsemap_link">
+                Human Resources
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/leadership-and-management?trk=learning-course_browsemap_link">
+                Leadership and Management
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/marketing-2?trk=learning-course_browsemap_link">
+                Marketing
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/professional-development?trk=learning-course_browsemap_link">
+                Professional Development
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/project-management?trk=learning-course_browsemap_link">
+                Project Management
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/sales-3?trk=learning-course_browsemap_link">
+                Sales
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/small-business-and-entrepreneurship?trk=learning-course_browsemap_link">
+                Small Business and Entrepreneurship
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/training-and-education?trk=learning-course_browsemap_link">
+                Training and Education
+              </a>
+</li>
+</ul>
+<a aria-label="See all business courses" class="link tw-linkster-general-link" data-tracking-control-name="learning-course_browsemap_general-link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/business?trk=learning-course_browsemap_general-link">
+              See all
+          </a>
+</div>
+<div class="flex-1 w-1/2 pt-2 pr-4 pb-4 pl-0 babybear:pb-2 babybear:w-full babybear:border-b-1 babybear:border-solid babybear:border-color-border-low-emphasis babybear:last:border-b-0">
+<h3 class="text-md font-bold text-color-text leading-open">
+            Explore Creative Topics
+          </h3>
+<ul class="my-1">
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/aec?trk=learning-course_browsemap_link">
+                AEC
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/animation-and-illustration?trk=learning-course_browsemap_link">
+                Animation and Illustration
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/audio-and-music?trk=learning-course_browsemap_link">
+                Audio and Music
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/graphic-design?trk=learning-course_browsemap_link">
+                Graphic Design
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/motion-graphics-and-vfx?trk=learning-course_browsemap_link">
+                Motion Graphics and VFX
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/photography-2?trk=learning-course_browsemap_link">
+                Photography
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/product-and-manufacturing?trk=learning-course_browsemap_link">
+                Product and Manufacturing
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/user-experience?trk=learning-course_browsemap_link">
+                User Experience
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/video-2?trk=learning-course_browsemap_link">
+                Video
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/visualization-and-real-time?trk=learning-course_browsemap_link">
+                Visualization and Real-Time
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/web-design?trk=learning-course_browsemap_link">
+                Web Design
+              </a>
+</li>
+</ul>
+<a aria-label="See all creative courses" class="link tw-linkster-general-link" data-tracking-control-name="learning-course_browsemap_general-link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/creative?trk=learning-course_browsemap_general-link">
+              See all
+          </a>
+</div>
+<div class="flex-1 w-1/2 pt-2 pr-4 pb-4 pl-0 babybear:pb-2 babybear:w-full babybear:border-b-1 babybear:border-solid babybear:border-color-border-low-emphasis babybear:last:border-b-0">
+<h3 class="text-md font-bold text-color-text leading-open">
+            Explore Technology Topics
+          </h3>
+<ul class="my-1">
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/artificial-intelligence?trk=learning-course_browsemap_link">
+                Artificial Intelligence (AI)
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/cloud-computing-5?trk=learning-course_browsemap_link">
+                Cloud Computing
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/data-science?trk=learning-course_browsemap_link">
+                Data Science
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/database-management?trk=learning-course_browsemap_link">
+                Database Management
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/devops?trk=learning-course_browsemap_link">
+                DevOps
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/hardware?trk=learning-course_browsemap_link">
+                Hardware
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/it-help-desk-5?trk=learning-course_browsemap_link">
+                IT Help Desk
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/mobile-development?trk=learning-course_browsemap_link">
+                Mobile Development
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/network-and-system-administration?trk=learning-course_browsemap_link">
+                Network and System Administration
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/security-3?trk=learning-course_browsemap_link">
+                Security
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/software-development?trk=learning-course_browsemap_link">
+                Software Development
+              </a>
+</li>
+<li class="tw-link-column-item">
+<a class="link tw-linkster-link" data-js-module-id="link-column-link" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/web-development?trk=learning-course_browsemap_link">
+                Web Development
+              </a>
+</li>
+</ul>
+<a aria-label="See all technology courses" class="link tw-linkster-general-link" data-tracking-control-name="learning-course_browsemap_general-link" data-tracking-will-navigate="" href="https://www.linkedin.com/learning/topics/technology?trk=learning-course_browsemap_general-link">
+              See all
+          </a>
+</div>
+</div>
+</section>
+</div>
+<footer class="li-footer bg-transparent w-full">
+<ul class="li-footer__list flex flex-wrap flex-row items-start justify-start w-full h-auto min-h-[50px] my-[0px] mx-auto py-3 px-2 papabear:w-[1128px] papabear:p-0">
+<li class="li-footer__item font-sans text-xs text-color-text-low-emphasis flex flex-shrink-0 justify-start p-1 relative w-50% papabear:justify-center papabear:w-auto">
+<span class="sr-only">LinkedIn</span>
+<icon class="li-footer__copy-logo text-color-logo-brand-alt inline-block self-center h-[14px] w-[56px] mr-1" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/e12h2cd8ac580qen9qdd0qks8"></icon>
+<span class="li-footer__copy-text flex items-center">© 2024</span>
+</li>
+<li class="li-footer__item font-sans text-xs text-color-text-low-emphasis flex flex-shrink-0 justify-start p-1 relative w-50% papabear:justify-center papabear:w-auto">
+<a class="li-footer__item-link flex items-center font-sans text-xs font-bold text-color-text-low-emphasis hover:text-color-link-hover focus:text-color-link-focus" data-tracking-control-name="d_learning_course_video_guest_footer-about" data-tracking-will-navigate="" href="https://about.linkedin.com?trk=d_learning_course_video_guest_footer-about">
+          
+          About
+        
+        </a>
+</li>
+<li class="li-footer__item font-sans text-xs text-color-text-low-emphasis flex flex-shrink-0 justify-start p-1 relative w-50% papabear:justify-center papabear:w-auto">
+<a class="li-footer__item-link flex items-center font-sans text-xs font-bold text-color-text-low-emphasis hover:text-color-link-hover focus:text-color-link-focus" data-tracking-control-name="d_learning_course_video_guest_footer-accessibility" data-tracking-will-navigate="" href="https://www.linkedin.com/accessibility?trk=d_learning_course_video_guest_footer-accessibility">
+          
+          Accessibility
+        
+        </a>
+</li>
+<li class="li-footer__item font-sans text-xs text-color-text-low-emphasis flex flex-shrink-0 justify-start p-1 relative w-50% papabear:justify-center papabear:w-auto">
+<a class="li-footer__item-link flex items-center font-sans text-xs font-bold text-color-text-low-emphasis hover:text-color-link-hover focus:text-color-link-focus" data-tracking-control-name="d_learning_course_video_guest_footer-user-agreement" data-tracking-will-navigate="" href="https://www.linkedin.com/legal/user-agreement?trk=d_learning_course_video_guest_footer-user-agreement">
+          
+          User Agreement
+        
+        </a>
+</li>
+<li class="li-footer__item font-sans text-xs text-color-text-low-emphasis flex flex-shrink-0 justify-start p-1 relative w-50% papabear:justify-center papabear:w-auto">
+<a class="li-footer__item-link flex items-center font-sans text-xs font-bold text-color-text-low-emphasis hover:text-color-link-hover focus:text-color-link-focus" data-tracking-control-name="d_learning_course_video_guest_footer-privacy-policy" data-tracking-will-navigate="" href="https://www.linkedin.com/legal/privacy-policy?trk=d_learning_course_video_guest_footer-privacy-policy">
+          
+          Privacy Policy
+        
+        </a>
+</li>
+<li class="li-footer__item font-sans text-xs text-color-text-low-emphasis flex flex-shrink-0 justify-start p-1 relative w-50% papabear:justify-center papabear:w-auto">
+<a class="li-footer__item-link flex items-center font-sans text-xs font-bold text-color-text-low-emphasis hover:text-color-link-hover focus:text-color-link-focus" data-tracking-control-name="d_learning_course_video_guest_footer-california-privacy-rights-act" data-tracking-will-navigate="" href="https://www.linkedin.com/legal/california-privacy-disclosure?trk=d_learning_course_video_guest_footer-california-privacy-rights-act">
+          
+            Your California Privacy Choices
+          
+        </a>
+</li>
+<li class="li-footer__item font-sans text-xs text-color-text-low-emphasis flex flex-shrink-0 justify-start p-1 relative w-50% papabear:justify-center papabear:w-auto">
+<a class="li-footer__item-link flex items-center font-sans text-xs font-bold text-color-text-low-emphasis hover:text-color-link-hover focus:text-color-link-focus" data-tracking-control-name="d_learning_course_video_guest_footer-cookie-policy" data-tracking-will-navigate="" href="https://www.linkedin.com/legal/cookie-policy?trk=d_learning_course_video_guest_footer-cookie-policy">
+          
+          Cookie Policy
+        
+        </a>
+</li>
+<li class="li-footer__item font-sans text-xs text-color-text-low-emphasis flex flex-shrink-0 justify-start p-1 relative w-50% papabear:justify-center papabear:w-auto">
+<a class="li-footer__item-link flex items-center font-sans text-xs font-bold text-color-text-low-emphasis hover:text-color-link-hover focus:text-color-link-focus" data-tracking-control-name="d_learning_course_video_guest_footer-copyright-policy" data-tracking-will-navigate="" href="https://www.linkedin.com/legal/copyright-policy?trk=d_learning_course_video_guest_footer-copyright-policy">
+          
+          Copyright Policy
+        
+        </a>
+</li>
+<li class="li-footer__item font-sans text-xs text-color-text-low-emphasis flex flex-shrink-0 justify-start p-1 relative w-50% papabear:justify-center papabear:w-auto">
+<a class="li-footer__item-link flex items-center font-sans text-xs font-bold text-color-text-low-emphasis hover:text-color-link-hover focus:text-color-link-focus" data-tracking-control-name="d_learning_course_video_guest_footer-brand-policy" data-tracking-will-navigate="" href="https://brand.linkedin.com/policies?trk=d_learning_course_video_guest_footer-brand-policy">
+          
+          Brand Policy
+        
+        </a>
+</li>
+<li class="li-footer__item font-sans text-xs text-color-text-low-emphasis flex flex-shrink-0 justify-start p-1 relative w-50% papabear:justify-center papabear:w-auto">
+<a class="li-footer__item-link flex items-center font-sans text-xs font-bold text-color-text-low-emphasis hover:text-color-link-hover focus:text-color-link-focus" data-tracking-control-name="d_learning_course_video_guest_footer-guest-controls" data-tracking-will-navigate="" href="https://www.linkedin.com/psettings/guest-controls?trk=d_learning_course_video_guest_footer-guest-controls">
+          
+            Guest Controls
+          
+        </a>
+</li>
+<li class="li-footer__item font-sans text-xs text-color-text-low-emphasis flex flex-shrink-0 justify-start p-1 relative w-50% papabear:justify-center papabear:w-auto">
+<a class="li-footer__item-link flex items-center font-sans text-xs font-bold text-color-text-low-emphasis hover:text-color-link-hover focus:text-color-link-focus" data-tracking-control-name="d_learning_course_video_guest_footer-community-guide" data-tracking-will-navigate="" href="https://www.linkedin.com/legal/professional-community-policies?trk=d_learning_course_video_guest_footer-community-guide">
+          
+          Community Guidelines
+        
+        </a>
+</li>
+<!-- -->
+<li class="li-footer__item font-sans text-xs text-color-text-low-emphasis flex flex-shrink-0 justify-start p-1 relative w-50% papabear:justify-center papabear:w-auto">
+<div class="collapsible-dropdown collapsible-dropdown--footer collapsible-dropdown--up flex items-center relative hyphens-auto language-selector z-2">
+<!-- -->
+<ul class="collapsible-dropdown__list hidden container-raised absolute w-auto overflow-y-auto flex-col items-stretch z-1 bottom-[100%] top-auto" role="menu" tabindex="-1">
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="العربية (Arabic)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="ar_AE" data-tracking-control-name="language-selector-ar_AE" lang="ar_AE" role="menuitem">
+                العربية (Arabic)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="Čeština (Czech)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="cs_CZ" data-tracking-control-name="language-selector-cs_CZ" lang="cs_CZ" role="menuitem">
+                Čeština (Czech)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="Dansk (Danish)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="da_DK" data-tracking-control-name="language-selector-da_DK" lang="da_DK" role="menuitem">
+                Dansk (Danish)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="Deutsch (German)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="de_DE" data-tracking-control-name="language-selector-de_DE" lang="de_DE" role="menuitem">
+                Deutsch (German)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="English (English) selected" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link--selected" data-locale="en_US" data-tracking-control-name="language-selector-en_US" lang="en_US" role="menuitem">
+<strong>English (English)</strong>
+</button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="Español (Spanish)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="es_ES" data-tracking-control-name="language-selector-es_ES" lang="es_ES" role="menuitem">
+                Español (Spanish)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="Français (French)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="fr_FR" data-tracking-control-name="language-selector-fr_FR" lang="fr_FR" role="menuitem">
+                Français (French)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="हिंदी (Hindi)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="hi_IN" data-tracking-control-name="language-selector-hi_IN" lang="hi_IN" role="menuitem">
+                हिंदी (Hindi)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="Bahasa Indonesia (Indonesian)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="in_ID" data-tracking-control-name="language-selector-in_ID" lang="in_ID" role="menuitem">
+                Bahasa Indonesia (Indonesian)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="Italiano (Italian)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="it_IT" data-tracking-control-name="language-selector-it_IT" lang="it_IT" role="menuitem">
+                Italiano (Italian)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="日本語 (Japanese)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="ja_JP" data-tracking-control-name="language-selector-ja_JP" lang="ja_JP" role="menuitem">
+                日本語 (Japanese)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="한국어 (Korean)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="ko_KR" data-tracking-control-name="language-selector-ko_KR" lang="ko_KR" role="menuitem">
+                한국어 (Korean)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="Bahasa Malaysia (Malay)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="ms_MY" data-tracking-control-name="language-selector-ms_MY" lang="ms_MY" role="menuitem">
+                Bahasa Malaysia (Malay)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="Nederlands (Dutch)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="nl_NL" data-tracking-control-name="language-selector-nl_NL" lang="nl_NL" role="menuitem">
+                Nederlands (Dutch)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="Norsk (Norwegian)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="no_NO" data-tracking-control-name="language-selector-no_NO" lang="no_NO" role="menuitem">
+                Norsk (Norwegian)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="Polski (Polish)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="pl_PL" data-tracking-control-name="language-selector-pl_PL" lang="pl_PL" role="menuitem">
+                Polski (Polish)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="Português (Portuguese)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="pt_BR" data-tracking-control-name="language-selector-pt_BR" lang="pt_BR" role="menuitem">
+                Português (Portuguese)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="Română (Romanian)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="ro_RO" data-tracking-control-name="language-selector-ro_RO" lang="ro_RO" role="menuitem">
+                Română (Romanian)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="Русский (Russian)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="ru_RU" data-tracking-control-name="language-selector-ru_RU" lang="ru_RU" role="menuitem">
+                Русский (Russian)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="Svenska (Swedish)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="sv_SE" data-tracking-control-name="language-selector-sv_SE" lang="sv_SE" role="menuitem">
+                Svenska (Swedish)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="ภาษาไทย (Thai)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="th_TH" data-tracking-control-name="language-selector-th_TH" lang="th_TH" role="menuitem">
+                ภาษาไทย (Thai)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="Tagalog (Tagalog)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="tl_PH" data-tracking-control-name="language-selector-tl_PH" lang="tl_PH" role="menuitem">
+                Tagalog (Tagalog)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="Türkçe (Turkish)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="tr_TR" data-tracking-control-name="language-selector-tr_TR" lang="tr_TR" role="menuitem">
+                Türkçe (Turkish)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="Українська (Ukrainian)" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="uk_UA" data-tracking-control-name="language-selector-uk_UA" lang="uk_UA" role="menuitem">
+                Українська (Ukrainian)
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="简体中文 (Chinese (Simplified))" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="zh_CN" data-tracking-control-name="language-selector-zh_CN" lang="zh_CN" role="menuitem">
+                简体中文 (Chinese (Simplified))
+            </button>
+</li>
+<li class="language-selector__item" role="presentation">
+<!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+<button aria-label="正體中文 (Chinese (Traditional))" class="font-sans text-xs link block py-[5px] px-2 w-full hover:cursor-pointer hover:bg-color-action hover:text-color-text-on-dark focus:bg-color-action focus:text-color-text-on-dark language-selector__link !font-regular" data-locale="zh_TW" data-tracking-control-name="language-selector-zh_TW" lang="zh_TW" role="menuitem">
+                正體中文 (Chinese (Traditional))
+            </button>
+</li>
+<!-- -->
+</ul>
+<button aria-expanded="false" class="language-selector__button select-none relative pr-2 font-sans text-xs font-bold text-color-text-low-emphasis hover:text-color-link-hover hover:cursor-pointer focus:text-color-link-focus focus:outline-dotted focus:outline-1" data-tracking-control-name="footer-lang-dropdown_trigger">
+<span class="language-selector__label-text mr-0.5 break-words">
+            Language
+          </span>
+<icon class="language-selector__label-chevron w-2 h-2 absolute top-0 right-0" data-delayed-url="https://static.licdn.com/aero-v1/sc/h/cyolgscd0imw2ldqppkrb84vo"></icon>
+</button>
+</div>
+</li>
+</ul>
+<!-- --> </footer>
+<script async="" src="https://static.licdn.com/aero-v1/sc/h/5mic7em4akle2l5km6kwwo2hf"></script>
+<script async="" defer="" src="https://static.licdn.com/aero-v1/sc/h/bs3wsuksfmali776ninausmez"></script>
+<script data-delayed-url="https://static.licdn.com/aero-v1/sc/h/1mrqkk4vypf5vls28tu9yfy8r" data-module-id="media-player"></script>
+<code id="trackingData" style="display: none"><!--{"hashedCourseId":"bYZuPtQQs3O+qO9JnSXz1oIycRQHo+KwKxi18611kxk=","urn":"urn:li:lyndaCourse:5025803","totalPrice":{"currencyCode":"USD","amount":"44.99"}}--></code>
+<code id="alcOnlyData" style="display: none"><!--{"isAlcOnly":false,"canPurchaseCourse":true}--></code>
+</body>
+</html>
+
+>>> 
