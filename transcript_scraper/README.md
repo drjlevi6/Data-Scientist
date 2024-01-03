@@ -8,6 +8,8 @@ This Python package is designed to scrape the transcript from a LinkedIn Learnin
 
 ### Usage
 
+Download the transcript_scraper package from `https://github.com/drjlevi6/Data-Scientist/` and move it to a location in your PYTHONPATH; in your terminal, type
+
 `python -m transcript_scraper`
 
 You will be prompted to enter the URL whose transcript is to be scraped.
