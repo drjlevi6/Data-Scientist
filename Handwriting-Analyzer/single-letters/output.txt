@@ -1,1 +1,0 @@
-convert: no encode delegate for this image format `RAW' @ warning/constitute.c/WriteImage/1298.
