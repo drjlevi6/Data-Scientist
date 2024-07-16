@@ -11,4 +11,6 @@ Use Scikit-learn's unsupervised learning function `KMeans` to redraw a multicolo
 
 ## To Run the Notebook:
 * Move `RGB_Cluster_Analysis.ipynb` and `date_time_string.py` to a folder in your `$PYTHONPATH`
-* Change the path in 
+* Move file `function-fx-drawing.png` to a location of your choice; change the path `png_path` in cell 2 of the notebook accordingly
+
+You should now be able to run the notebook.
