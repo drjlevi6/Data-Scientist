@@ -4,7 +4,9 @@
 
 # Locate text beginning
 #selectTextLineNum=$(( `pbpaste | sed -En '/ *\- \[/='` ))
-selectTextLineNum=$(( `pbpaste | sed -En '/^( *\- )?[\[\(]/=' | tail -n 1` ))
+#selectTextLineNum=$(( `pbpaste | sed -En '/^( *\- )?[\[\(]/=' | tail -n 1` ))
+selectTextLineNum=\
+`pbpaste | sed -En '/^( *\- )/=' | tail -n 1` # 1st line with [ ]*(- )
 echo $selectTextLineNum
 
 pbpaste | 
